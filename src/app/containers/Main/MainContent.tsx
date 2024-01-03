@@ -45,10 +45,12 @@ export default function MainContent({
 
     const countriePreview = useMemo(() => {
         if (!filteredCountries) return;
+        if (page > 1 && filteredCountries.length < 16) setPage(1);
+        if (page === 0) setPage(1)
         const currentCountries = filteredCountries.slice((page - 1) * 16, page * 16)
 
         return currentCountries;
-    }, [countries, page, filteredCountries])
+    }, [countries, page, filteredCountries, region])
 
     const prevPage = () => {
         if (!countriePreview) return;
@@ -69,7 +71,6 @@ export default function MainContent({
     }, [page, filteredCountries])
 
     const redirectCountrieDetailsPage = (countrie: string) => {
-        console.log('push')
         router.push(`/countries/${countrie}`)
     }
 
@@ -98,7 +99,7 @@ export default function MainContent({
                     <p className="text-2xl">No results</p>
                 </div>
             ) : (
-                <div>
+                <div className="flex gap-3">
                     <button onClick={prevPage}>
                         Previous page
                     </button>
@@ -110,11 +111,11 @@ export default function MainContent({
             )}
 
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-12 mb-5">
                 {countriePreview?.map((countrie) => (
                     <Card key={countrie.name.common} onClick={() => redirectCountrieDetailsPage(countrie.name.common)}>
                         <div className="flex justify-center">
-                            <img src={countrie.flags.png} alt={countrie.name.common} className="w-full h-52" />
+                            <img src={countrie.flags.png} alt={countrie.flags.alt} className="w-full h-44" />
                         </div>
                         <div className="mt-4 p-6">
                             <h3 className="text-lg font-semibold">{countrie.name.common}</h3>

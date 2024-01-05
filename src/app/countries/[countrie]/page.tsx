@@ -1,5 +1,4 @@
 import NavigateButton from "@/app/components/NavigateButton";
-import type { Metadata, ResolvingMetadata } from 'next'
 
 import getCountrieByName from "@/app/services/countrie-by-name.service";
 import getCountries from "@/app/services/get-countries.service";
@@ -21,7 +20,7 @@ export async function generateStaticParams() {
 export default async function Page({ params }: Params) {
     const countrie = await getCountrieByName(params.countrie);
 
-    const languagesArray = Object.values(countrie.languages);
+    const languagesArray = countrie.languages ? Object.values(countrie.languages) : [];
     const languages = languagesArray.slice(0, -1).join(', ') + (languagesArray.length > 1 ? ' and ' : '') + languagesArray.slice(-1);
 
     return (

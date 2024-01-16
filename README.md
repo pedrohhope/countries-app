@@ -1,36 +1,33 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+# Countries APP
 
-First, run the development server:
+Descrição:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+O Countries APP é um projeto de listagem de países desenvolvido utilizando o framework Next.js, aproveitando a nova versão do App Router. Este aplicativo fornece uma interface amigável e responsiva para explorar informações detalhadas sobre diversos países em todo o mundo.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Recursos Principais:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Listagem de Países: Apresenta uma lista abrangente de países, incluindo seus nomes e bandeiras.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Detalhes do País: Ao clicar em um país específico, os usuários podem acessar informações detalhadas, como capital, população, área, línguas oficiais e moeda.
 
-## Learn More
+Pesquisa e Filtragem: Oferece funcionalidade de pesquisa para facilitar a localização de países específicos. Além disso, os usuários podem filtrar os países por região, permitindo uma busca mais direcionada.
 
-To learn more about Next.js, take a look at the following resources:
+Design Responsivo: Garante uma experiência de usuário consistente em dispositivos desktop e móveis, utilizando as capacidades responsivas do Next.js.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Integração com API Externa: Utiliza uma API externa de dados de países para obter informações em tempo real e garantir a precisão dos dados exibidos.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Roteamento com App Router: Aproveita a nova versão do App Router do Next.js para gerenciar a navegação entre diferentes páginas de forma eficiente e suave.
 
-## Deploy on Vercel
+Tecnologias Utilizadas:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Next.js: Framework React para renderização do lado do servidor (SSR) e geração de páginas estáticas.
+React: Biblioteca JavaScript para construção de interfaces de usuário.
+App Router: Novo sistema de roteamento no Next.js para uma navegação otimizada.
+API de Dados de Países: Uma API externa fornecendo informações sobre países.
+Como Executar Localmente:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Clone o repositório do GitHub: git clone https://github.com/pedrohhope/countries-app.git
+Instale as dependências: yarn
+Execute o aplicativo localmente: yarn dev
+Acesse o aplicativo no navegador: http://localhost:3000

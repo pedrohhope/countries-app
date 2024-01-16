@@ -27,7 +27,18 @@ App Router: Novo sistema de roteamento no Next.js para uma navegação otimizada
 API de Dados de Países: Uma API externa fornecendo informações sobre países.
 Como Executar Localmente:
 
-Clone o repositório do GitHub: git clone https://github.com/pedrohhope/countries-app.git
-Instale as dependências: yarn
-Execute o aplicativo localmente: yarn dev
-Acesse o aplicativo no navegador: http://localhost:3000
+```bash
+# Clone o repositório do GitHub
+git clone https://github.com/pedrohhope/countries-app.git
+
+# Instale as dependências
+yarn
+# ou
+npm install
+
+# Execute o aplicativo localmente
+yarn dev
+# ou
+npm run dev
+```
+
